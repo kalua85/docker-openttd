@@ -32,7 +32,7 @@ jobs:
         run: |
           # Fetch the latest stable release of OpenGFX (exclude beta versions)
           # echo "version=$(curl -s -H 'Accept: application/vnd.github.v3+json' https://api.github.com/repos/OpenTTD/OpenGFX/releases | jq -cMr '([.[]|select(all(.tag_name; contains("beta")|not))])|.[:1]|.[].tag_name')" >> "${GITHUB_OUTPUT}"
-          echo "8.0"
+          echo "version=8.0" >> "${GITHUB_OUTPUT}"
           
       - name: Output Versions
         run: |
